@@ -1,0 +1,22 @@
+.btn1 {
+    background-color: #000080; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px groove #000080;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  td:hover{
+    color: black;
+    font-style: normal;
+  }
+  .btn1:hover{
+    background-color: white;
+    color: #000080;
+    border:2px groove #000080;
+  }

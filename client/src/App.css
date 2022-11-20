@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+.App {
+    text-align: center;
+}
+
+/* Header Component  */
+
+
+/* Bulletin */
+
+.name1 {
+    display: block;
+    background-color: #06283D;
+    color: white;
+    padding-top: 4px;
+    padding-left: 15px;
+    padding-right: 16px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid #06283D;
+}
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (max-width: 500px) {
+    .header {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .icons {
+        float: none;
+    }
+}
+
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.icons {
+    font-size: x-large;
+}
+
+.fa-instagram {
+    color: #fff;
+}
+
+.fa-twitter {
+    color: #fff;
+}
+
+.fa-facebook {
+    color: #fff;
+}
+
+.fa-linkedin {
+    color: #fff;
+}
+
+
+
+.main_bull {
+    display: flex;
+    margin-left: -8px;
+    /* margin-top: px; */
+    background-color: rgb(255, 255, 255);
+}
+
+
+.bulletin_content {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (max-width: 500px) {
+    .header {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .main_header {
+        background-color: #E3E5C7;
+        display: flex;
+        height: 120px;
+        padding: 0px;
+        width: 101%;
+        margin: -8px;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-right: 15px;
+    }
+    .header1 {
+        margin-left: 35px;
+        color: #000080;
+        margin-top: 5px;
+    }
+    .college_name {
+        font-size: xx-large;
+    }
+    .header3 {
+        color: #F80CA7;
+        font-weight: 600;
+    }
+    .header2 {
+        margin-bottom: 12px;
+        margin-top: 5px;
+    }
+    .icons {
+        font-size: x-large;
+        margin-left: 55px;
+        display: flex;
+        margin-top: 15px;
+    }
+}
+
+.quick_links {
+    background-color: #000080;
+    left: 50%;
+    height: 45px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    /* width: 100%; */
+    padding: 10px;
+    
+}
+
+.quick_content {
+    /* margin-left: 150px; */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 38px;
+    background-color: #000080;
+    color: white;
+    font-size: larger;
+
+}
+
+.row1 {
+    width: 85%;
+    margin: 2rem auto;
+    /* margin-right: 2.5rem; */
+    margin-top: 4rem;
+}
+
+
+.col {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 5vw);
+    grid-gap: 5.5rem;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Temporary css */
+
+.sidebar {
+    box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+}
+
+.nav-item,
+.navbar {
+    z-index: 10000;
+}
+
+@media screen and (max-width:800px) {
+    .sidebar {
+        z-index: 10000000;
+    }
+}
+
+
+.gallery__item-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item-3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.gallery__item-4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gallery__item-5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+.gallery__item-6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+.attendance,
+.calendar,
+.datesheet,
+.hostel,
+.internal_assessment,
+.placement_cell,
+.scholarship,
+.student_facilities,
+.student_union,
+.time_table {
+    height: 100px;
+    width: 100px;
+}
+a:hover img{
+    transform: scale(1.1);
+}
+
+/* bulletin_content */
+.bar_content {
+    display: block; /* Important to give the content a width */
+  
+    width: 95%;
+    transform: translateX(100%); /* Animation start out of the screen */
+  
+    /* Add the animation */
+    animation: move 30s linear infinite /* infinite make reapeat the animation indefinitely */;
+  }
+  
+  /* Create the animation */
+  @keyframes move {
+    to { transform: translateX(-100%); }
+  }
+
+/* bulletin_content */
+.marquee{
+    /* margin: 0 auto; */
+    white-space: nowrap;
+    /* overflow: hidden; */
+    position: absolute;
+    display: inline-block;
+    /* Add the animation */
+    animation: move 30s linear infinite /* infinite make reapeat the animation indefinitely */;
+}
+.marquee span {
+    display: inline-block; /* Important to give the content a width */
+  }
+  
+  /* Create the animation */
+  @keyframes move {
+    0% { transform: translate3d(100%,0,0); }
+    100% { transform: translate3d(-85%,0,0); }
+  }
+
+/* Table Css */
+

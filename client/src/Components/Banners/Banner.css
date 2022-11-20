@@ -1,0 +1,22 @@
+.Banner {
+    background: url("../../../public/images/img1.jpeg") no-repeat center center;
+    /* height: 280px; */
+    width: 100%;
+    opacity: 0.8;
+    background-size: cover;
+}
+
+.name {
+    position: relative;
+    opacity: 1;
+}
+
+.name div p {
+    text-shadow: -4px 4px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
+}
+
+
+/* .caption {
+    font-weight: 300;
+    font-size: large;
+} */

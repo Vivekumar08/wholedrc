@@ -1,0 +1,13 @@
+.res{
+    padding: 12px;
+    
+    /* margin-top: 10px; */
+}
+
+.res:hover{
+color: blue;
+font-size: 28px;
+}
+
+
+

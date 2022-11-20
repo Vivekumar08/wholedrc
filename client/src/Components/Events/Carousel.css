@@ -1,0 +1,193 @@
+:root {
+    --up: 3;
+    --card-margin: 12px;
+    --card-shadow: rgba(46, 49, 52, .4);
+    --color-white: #fff;
+    --color-lightgrey: #ccc;
+    --color-ui: #999;
+    --color-ui-hover: #666;
+    --cardWidth: calc(96vw/var(--up));
+    --carouselWidth: calc(var(--cardWidth) * var(--num));
+    --carouselLeftMargin: calc(2vw - var(--cardWidth));
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        /*basically mobile*/
+        --up: 1;
+    }
+}
+
+.carouselwrapper {
+    overflow: hidden;
+    /* background: var(--color-lightgrey); */
+    position: relative;
+}
+
+.carousel_car {
+    margin-left: 15px;
+    /* width: 100%; */
+    width: var(--carouselWidth);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.carousel_car.prev {
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    animation-name: prev;
+}
+
+.carousel_car.next {
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    animation-name: next;
+}
+
+
+
+
+.small_box {
+    position: relative;
+    height: fit-content;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 1px;
+    opacity: 1;
+    box-shadow: 10px;
+    width: fit-content;
+    border-radius: 16px;
+    margin-top: 30px;
+    border: 4px solid transparent;
+
+
+}
+
+.read_btn {
+    position: absolute;
+    color: white;
+    background-color: #D21F3C;
+    padding: 10px;
+    height: fit-content;
+    width: 80%;
+    z-index: 10;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-top: -100px;
+    margin-left: 20px;
+    opacity: 0;
+}
+
+.event_name {
+    position: absolute;
+    color: white;
+    padding: 10px;
+    height: fit-content;
+    width: 200px;
+    z-index: 10;
+    margin-top: -220px;
+    margin-left: 40px;
+    text-shadow: -2px 2px 0 #000,
+        2px 2px 0 #000,
+        2px -2px 0 #000,
+        -2px -2px 0 #000;
+}
+
+
+.event_img {
+    width: 100%;
+    height: auto;
+    max-width: 50vw;
+    max-height: 50vh;
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.event_img:hover {
+    box-shadow: inset;
+    transition: all .3s ease;
+}
+
+.small_box:hover .event_img {
+    transition: all .3s ease;
+}
+
+.small_box:hover {
+    border: 4px solid #D21F3C;
+
+}
+
+.small_box:hover .read_btn {
+    opacity: 1;
+}
+
+.read_btn:hover {
+    border: 2px solid black;
+    background-color: darkred;
+    box-shadow: 50px;
+}
+
+.ui {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 100;
+}
+
+.ui button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-ui);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--color-white);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, .25);
+    border: 0;
+    transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.ui button:hover {
+    background: var(--color-ui-hover);
+}
+
+.ui button:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.card_car {
+    box-shadow: 0px 1px 2px 0px var(--card-shadow);
+    border-radius: 4px;
+    margin: var(--card-margin);
+    background: var(--color-white);
+}
+
+
+@keyframes next {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(calc(0px + var(fit-content)));
+    }
+}
+
+@keyframes prev {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(calc(0px - var(fit-content)));
+    }
+}

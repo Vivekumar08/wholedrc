@@ -1,0 +1,44 @@
+.btn {
+  background-color: #000080; 
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  border:2px groove #000080;
+}
+
+td:hover{
+  color: black;
+  font-style: normal;
+}
+.btn:hover{
+  background-color: white;
+  color: #000;
+  border:2px groove #000080;
+}
+.stop{
+  /* height: 1%; */
+  white-space: nowrap;
+}
+.row{
+  width: 10%;
+  white-space: nowrap;
+}
+
+
+@media screen and (max-width: 700px){
+  .btn {
+    background-color: #000080; 
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 10px;
+    border:2px groove #000080;
+  }
+}
