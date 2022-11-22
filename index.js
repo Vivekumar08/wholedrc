@@ -2,10 +2,10 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
+const path = require('path')
 const app = express();
 
-dotenv.config({ path: './config.env' })
+// dotenv.config({ path: './config.env' })
 require('./db/conn')
 app.use(express.json());
 app.use(bodyParser.urlencoded(
