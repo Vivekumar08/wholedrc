@@ -14,19 +14,13 @@ app.use(bodyParser.urlencoded(
 
 app.use(cors());
 app.use(express.json());
-// app.set("view engine", "ejs")
 
+if (process.env.NODE_ENV === 'production') {
+  //*Set static folder up in production
+  app.use(express.static('client/build'));
 
-app.use(express.static(path.join(__dirname, 'client', 'build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
-
-app.get("/",async(req,res)=>{
-  res.json("Daulatram Server Deployed successfully, except departments")
-})
-
+  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')));
+}
 app.use(require('./router/api'));
 
 const port = process.env.PORT || 5000;
